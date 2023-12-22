@@ -19,13 +19,11 @@ Universal instructions on building, flashing, and debugging this project can be 
 
 -	Open all TS_EN jumper to access  SPO0 Line
 -	Unplug TFT LCD Display to access SPI1 Line
--   For MAX32572-QNKIT, Be sure DISP_RS_DC is connected to DISP1 socket
-		R53 should be assembled, to DISP_RS_DC line goes to DISP1 socket, Please check it
 -   Connect SPI0 pins with SPI1 with jumpers
-        SS  : P0.2 (TS_SSEL0) <-->  P1.0  (DISP_RS_DC)
-        MISO: P0.3 (TS_MISO)  <-->  P1.3  (DISP_MISO)
-        MOSI: P0.4 (TS_MOSI)  <-->  P1.4  (DISP_MOSI)
-        CLK : P0.5 (TS_CLK)   <-->  P1.5  (DISP_CLK)
+        SS  : P0.2 (SPI0A_TS0) <-->  P1.0  (SPI1A_TS1)
+        MISO: P0.3 (SPI0A_CITO)  <-->  P1.3  (SPI1A_CITO)
+        MOSI: P0.4 (SPI0A_COTI)  <-->  P1.4  (SPI1A_COTI)
+        CLK : P0.5 (SPI0A_SCK)   <-->  P1.5  (SPI1A_SCK)
 
 -   Open an terminal application on the PC and connect to the EV kit's console UART at 115200, 8-N-1.
 
@@ -44,10 +42,10 @@ For MAX32572-QNKIT, Be sure DISP_RS_DC is connected to DISP1 socket
 SPI0 is configured as master
 SPI1 is configured as slave
 Please use jumper to connect these two spi ports:
-        SS  : P0.2 (TS_SSEL0)  <--> P1.0  (DISP_RS_DC)
-        MISO: P0.3 (TS_MISO)   <--> P1.3  (DISP_MISO)
-        MOSI: P0.4 (TS_MOSI)   <--> P1.4  (DISP_MOSI)
-        CLK : P0.5 (TS_CLK)    <--> P1.5  (DISP_CLK)
+        SS  : P0.2 (SPI0A_TS0)  <--> P1.0  (SPI1A_TS1)
+        MISO: P0.3 (SPI0A_CITO)   <--> P1.3  (SPI1A_CITO)
+        MOSI: P0.4 (SPI0A_COTI)   <--> P1.4  (SPI1A_COTI)
+        CLK : P0.5 (SPI0A_SCK)    <--> P1.5  (SPI1A_SCK)
 
 This example will send some test byte from master to slave then from slave to master
 To change number of bytes please change TEST_BUFF_SIZE
