@@ -89,8 +89,8 @@ int main(void)
 
     printf("---------------------------------------------------------------------------------------"
            "--------\n");
-    printf("Open all TS_EN jumper to access  SPI%d Line\n", MXC_SPI_GET_IDX(SPIx_MASTER));
-    printf("Unplug TFT LCD Display to access SPI%d Line\n", MXC_SPI_GET_IDX(SPIx_SLAVE));
+    printf("Open all TS_EN jumper to access  SPI%d Line\n", MXC_SPI_GET_IDX(SPIx_SLAVE));
+    printf("Unplug TFT LCD Display to access SPI%d Line\n", MXC_SPI_GET_IDX(SPIx_MASTER));
     printf("SPI%d is configured as master\n", MXC_SPI_GET_IDX(SPIx_MASTER));
     printf("SPI%d is configured as slave\n", MXC_SPI_GET_IDX(SPIx_SLAVE));
     printf("Please use jumper to connect these two SPI ports:\n");
