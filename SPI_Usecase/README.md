@@ -1,6 +1,6 @@
 ## Description
 
-This example will send some test byte from master (SPI0) to slave (SPI1) then from slave to master
+This example will send some test byte from master (SPI1) to slave (SPI0) then from slave to master
 To change number of bytes please change TEST_BUFF_SIZE in spi_config.h file
 Please connect SPI0 pins to SPI1 on EvKit
     
